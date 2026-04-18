@@ -1,0 +1,50 @@
+# Canonical States for Academic-Ops Tracker
+
+states:
+  - name: Evaluated
+    description: Report completed, pending decision
+    emoji: "📋"
+
+  - name: Emailed
+    description: Contact email sent to PI
+    emoji: "📧"
+
+  - name: Applied
+    description: Formal application submitted
+    emoji: "📨"
+
+  - name: Responded
+    description: PI or admin responded
+    emoji: "💬"
+
+  - name: Interview
+    description: Interview or lab visit scheduled/completed
+    emoji: "🎤"
+
+  - name: Offered
+    description: Position offered
+    emoji: "🎉"
+
+  - name: Accepted
+    description: Offer accepted
+    emoji: "✅"
+
+  - name: Rejected
+    description: Rejected by lab or committee
+    emoji: "❌"
+
+  - name: Discarded
+    description: Discarded by candidate or position closed/filled
+    emoji: "🚫"
+
+  - name: SKIP
+    description: Doesn't fit, don't apply
+    emoji: "⏭️"
+
+  - name: Waitlisted
+    description: On waitlist or "no positions now, try later"
+    emoji: "⏳"
+
+  - name: Deferred
+    description: Application deferred to future cycle
+    emoji: "📅"

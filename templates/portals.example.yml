@@ -1,0 +1,407 @@
+# Academic-Ops Portal Configuration
+# Copy this file to portals.yml and customize for your field
+
+# ============================================================
+# AGGREGATOR PORTALS — Multi-institution job boards
+# ============================================================
+portals:
+
+  # --- Global ---
+  - name: EURAXESS
+    url: https://euraxess.ec.europa.eu/jobs/search
+    type: aggregator
+    region: Europe
+    levels: [R1, R2, R3]  # R1=early, R2=recognized, R3=established
+    notes: "Best for European positions. Filter by research field and career stage."
+
+  - name: AcademicJobsOnline
+    url: https://academicjobsonline.org/ajo/jobs
+    type: aggregator
+    region: Global
+    notes: "Strong for US/Canada postdocs. Many top universities post here."
+
+  - name: jobs.ac.uk
+    url: https://www.jobs.ac.uk
+    type: aggregator
+    region: UK
+    notes: "UK-focused but includes some European positions."
+
+  - name: AcademicTransfer
+    url: https://www.academictransfer.com/en/jobs/
+    type: aggregator
+    region: Netherlands/Europe
+    notes: "Dutch universities, but also Belgium, Germany."
+
+  - name: HigherEdJobs
+    url: https://www.higheredjobs.com
+    type: aggregator
+    region: USA
+    notes: "US-focused, good for research positions."
+
+  - name: ScholarshipDB
+    url: https://scholarshipdb.net
+    type: aggregator
+    region: Global
+    notes: "Scholarships and funded PhD/postdoc positions."
+
+  # --- Discipline-Specific ---
+  - name: mathjobs.org
+    url: https://www.mathjobs.org/jobs
+    type: discipline
+    fields: [mathematics, statistics, applied math, data science]
+
+  - name: PhysicsToday Jobs
+    url: https://jobs.physicstoday.org
+    type: discipline
+    fields: [physics, astronomy, astrophysics]
+
+  - name: Nature Careers
+    url: https://www.nature.com/naturecareers
+    type: discipline
+    fields: [biology, chemistry, physics, medicine, interdisciplinary]
+
+  - name: Science Careers (AAAS)
+    url: https://jobs.sciencecareers.org
+    type: discipline
+    fields: [biology, chemistry, engineering, medicine]
+
+  - name: Computing Research Association
+    url: https://cra.org/ads/
+    type: discipline
+    fields: [computer science, information science]
+
+  # --- AI / ML / NLP / CV / Robotics ---
+  - name: AI Jobs Board
+    url: https://aijobs.net
+    type: ai
+    fields: [AI, machine learning, deep learning, NLP, computer vision]
+
+  - name: NeurIPS Job Board
+    url: https://neurips.cc/Conferences/2026/JobBoard
+    type: ai
+    seasonal: true
+    active_months: [9, 10, 11, 12, 1]
+    fields: [machine learning, deep learning, AI, reinforcement learning]
+    notes: "Active around NeurIPS season. Top labs post here."
+
+  - name: ICML Job Board
+    url: https://icml.cc/virtual/2026/jobs
+    type: ai
+    seasonal: true
+    active_months: [4, 5, 6, 7]
+    fields: [machine learning, optimization, deep learning]
+
+  - name: ACL Rolling Review Jobs
+    url: https://aclrollingreview.org/jobs
+    type: ai
+    fields: [NLP, computational linguistics, language models]
+
+  - name: Robotics Worldwide Jobs
+    url: https://robotics-worldwide.org/jobs
+    type: ai
+    fields: [robotics, autonomous systems, control, manipulation]
+
+  - name: AAAI Job Board
+    url: https://aaai.org/career-center/
+    type: ai
+    fields: [artificial intelligence, knowledge representation, planning]
+
+  - name: MLOps Community Jobs
+    url: https://mlops.community/jobs/
+    type: ai
+    fields: [MLOps, ML engineering, production ML]
+    notes: "More applied/engineering but some research positions"
+
+# ============================================================
+# COMMUNITY SPREADSHEETS — Crowd-sourced opening lists
+# ============================================================
+# These are Google Sheets maintained by the research community
+# where professors self-list their openings. GOLD for finding
+# positions not posted on any portal.
+community_sheets:
+  - name: "PhD/RA/Interns Opening 2026"
+    url: https://docs.google.com/spreadsheets/d/1vcEUT_5bXYFQgIzVKpsMQlYmV2xv15VtLXq2rvXZqRk/htmlview#gid=0
+    type: community_sheet
+    fields: [AI, NLP, ML, computer vision, robotics]
+    update_frequency: "daily — professors self-list"
+    notes: >
+      THE go-to community spreadsheet for AI/NLP/ML positions.
+      Professors post their own PhD, RA, and intern openings here.
+      Updated frequently. Check this FIRST — many positions here
+      never appear on any formal portal. Auto mode downloads and
+      parses this sheet each run.
+    priority: high
+    scan_method: "csv_export"
+    csv_url: "https://docs.google.com/spreadsheets/d/1vcEUT_5bXYFQgIzVKpsMQlYmV2xv15VtLXq2rvXZqRk/export?format=csv&gid=0"
+
+  # Add more community sheets here as they appear:
+  # - name: "Graduate Admissions 2025-2026"
+  #   url: https://docs.google.com/spreadsheets/d/...
+  #   type: community_sheet
+
+# ============================================================
+# AI RESEARCH LABS — Pre-configured lab career pages
+# ============================================================
+ai_labs:
+  # --- Industry Research Labs (with academic-style positions) ---
+  - name: Google DeepMind
+    url: https://deepmind.google/about/careers/
+    type: ai_lab
+    positions: [research scientist, research engineer, resident]
+    notes: "Research Scientist and AI Resident programs"
+
+  - name: Meta FAIR
+    url: https://ai.meta.com/research/careers/
+    type: ai_lab
+    positions: [research scientist, postdoc, research engineer]
+    notes: "FAIR publishes at top venues, postdoc program available"
+
+  - name: Microsoft Research
+    url: https://www.microsoft.com/en-us/research/careers/
+    type: ai_lab
+    positions: [researcher, postdoc, research intern]
+    notes: "MSR labs worldwide. Strong postdoc and intern programs."
+
+  - name: Apple ML Research
+    url: https://machinelearning.apple.com/work-with-us
+    type: ai_lab
+    positions: [research scientist, ML engineer, intern]
+
+  - name: NVIDIA Research
+    url: https://www.nvidia.com/en-us/research/careers/
+    type: ai_lab
+    positions: [research scientist, postdoc, intern]
+    notes: "GPU computing, graphics, autonomous vehicles, LLMs"
+
+  - name: Amazon Science
+    url: https://www.amazon.science/careers
+    type: ai_lab
+    positions: [applied scientist, research scientist, intern]
+
+  - name: IBM Research
+    url: https://research.ibm.com/careers
+    type: ai_lab
+    positions: [research scientist, postdoc, intern]
+    notes: "AI, quantum computing, hybrid cloud"
+
+  - name: Anthropic Research
+    url: https://www.anthropic.com/careers
+    type: ai_lab
+    positions: [research scientist, research engineer]
+    notes: "AI safety, alignment, interpretability"
+
+  - name: OpenAI
+    url: https://openai.com/careers/
+    type: ai_lab
+    positions: [research scientist, research engineer]
+
+  - name: Cohere Research
+    url: https://cohere.com/careers
+    type: ai_lab
+    positions: [research scientist, ML engineer]
+    notes: "NLP-focused, multilingual models"
+
+  - name: Hugging Face
+    url: https://huggingface.co/jobs
+    type: ai_lab
+    positions: [research scientist, ML engineer]
+    notes: "Open-source ML, NLP, multimodal"
+
+  - name: Allen Institute for AI (AI2)
+    url: https://allenai.org/careers
+    type: ai_lab
+    positions: [predoctoral researcher, research scientist, postdoc]
+    notes: "Non-profit research lab. Strong predoc program (Ai2 Young Investigator)."
+
+  - name: EleutherAI
+    url: https://www.eleuther.ai/get-involved
+    type: ai_lab
+    positions: [volunteer researcher, visiting researcher]
+    notes: "Open-source AI research collective. Non-traditional but high-impact."
+
+  # --- Academic AI Institutes ---
+  - name: Mila (Montréal)
+    url: https://mila.quebec/en/careers/
+    type: ai_institute
+    positions: [postdoc, PhD intern, research associate]
+    notes: "Yoshua Bengio's institute. Top for deep learning, RL, generative models."
+
+  - name: Vector Institute (Toronto)
+    url: https://vectorinstitute.ai/careers/
+    type: ai_institute
+    positions: [postdoc, research scientist, applied ML]
+    notes: "Geoffrey Hinton's institute. Strong ML theory and applications."
+
+  - name: CIFAR AI Chairs
+    url: https://cifar.ca/ai/
+    type: ai_institute
+    positions: [Canada CIFAR AI Chair, postdoc]
+    notes: "CIFAR-affiliated positions across Canada"
+
+  - name: ELLIS Network
+    url: https://ellis.eu/jobs
+    type: ai_institute
+    region: Europe
+    positions: [postdoc, PhD, research fellow]
+    notes: "European Lab for Learning & Intelligent Systems. Multi-city network."
+
+  - name: Max Planck for Intelligent Systems
+    url: https://is.mpg.de/jobs
+    type: ai_institute
+    region: Germany
+    positions: [postdoc, PhD, research scientist]
+    notes: "Tübingen + Stuttgart. ML, robotics, perception."
+
+  - name: INRIA
+    url: https://jobs.inria.fr/public/classic/en/offres
+    type: ai_institute
+    region: France
+    positions: [postdoc, research scientist, PhD]
+    notes: "French national research institute. Multiple AI teams across France."
+
+  - name: RIKEN AIP (Japan)
+    url: https://aip.riken.jp/careers/
+    type: ai_institute
+    region: Japan
+    positions: [postdoc, research scientist, visiting researcher]
+    notes: "Top Japanese AI research center."
+
+  - name: KAIST AI
+    url: https://gsai.kaist.ac.kr/
+    type: ai_institute
+    region: South Korea
+    positions: [postdoc, PhD, research professor]
+
+  - name: Stanford HAI
+    url: https://hai.stanford.edu/careers
+    type: ai_institute
+    positions: [postdoc, research scientist]
+    notes: "Human-Centered AI Institute"
+
+  - name: MIT CSAIL
+    url: https://www.csail.mit.edu/about/job-openings
+    type: ai_institute
+    positions: [postdoc, research scientist, research engineer]
+
+  - name: Berkeley AI Research (BAIR)
+    url: https://bair.berkeley.edu/
+    type: ai_institute
+    positions: [postdoc, visiting researcher]
+    notes: "Check individual faculty pages for openings"
+
+  - name: CMU Machine Learning Department
+    url: https://www.ml.cmu.edu/careers/
+    type: ai_institute
+    positions: [postdoc, research scientist, systems scientist]
+
+# ============================================================
+# FELLOWSHIP & FUNDING PORTALS
+# ============================================================
+fellowships:
+  - name: DAAD
+    url: https://www.daad.de/en/studying-in-germany/scholarships/
+    region: Germany
+    notes: "German Academic Exchange Service — research fellowships"
+
+  - name: Fulbright
+    url: https://foreign.fulbrightonline.org
+    region: USA
+    notes: "US exchange program — varies by country"
+
+  - name: Marie Skłodowska-Curie
+    url: https://marie-sklodowska-curie-actions.ec.europa.eu
+    region: Europe
+    notes: "EU-funded postdoc fellowships — very competitive"
+
+  - name: Swiss Government Excellence Scholarships
+    url: https://www.sbfi.admin.ch/sbfi/en/home/education/scholarships-and-grants.html
+    region: Switzerland
+
+  - name: Japan Society for the Promotion of Science (JSPS)
+    url: https://www.jsps.go.jp/english/e-fellow/
+    region: Japan
+
+# ============================================================
+# UNIVERSITY CAREER PAGES (add your target universities)
+# ============================================================
+universities:
+  - name: MIT
+    url: https://careers.mit.edu
+    departments: []  # add specific department URLs
+
+  - name: Stanford
+    url: https://postdocs.stanford.edu/prospective/opportunities
+
+  - name: ETH Zürich
+    url: https://jobs.ethz.ch
+
+  - name: University of Oxford
+    url: https://www.ox.ac.uk/about/jobs/research/
+
+  - name: Max Planck Institutes
+    url: https://www.mpg.de/careers
+    notes: "German research institutes — excellent for PhD and postdoc"
+
+  - name: EPFL
+    url: https://www.epfl.ch/about/working/working-at-epfl/
+
+  - name: University of Cambridge
+    url: https://www.jobs.cam.ac.uk/
+
+  - name: Caltech
+    url: https://www.caltech.edu/about/careers
+
+  - name: UC Berkeley
+    url: https://aprecruit.berkeley.edu/JPF03/apply
+
+# ============================================================
+# LAB GROUP PAGES (add specific labs you're interested in)
+# ============================================================
+labs:
+  # Example:
+  # - name: "Smith Lab"
+  #   pi: "Dr. Jane Smith"
+  #   institution: "MIT"
+  #   url: https://smithlab.mit.edu
+  #   openings_page: https://smithlab.mit.edu/join
+  #   field: "computational neuroscience"
+
+# ============================================================
+# SEARCH QUERIES (used on aggregator sites)
+# ============================================================
+queries:
+  # These are populated from your profile.yml research.keywords
+  # Add custom queries here if needed
+  custom: []
+
+# ============================================================
+# FILTERS
+# ============================================================
+title_filter:
+  positive:
+    - postdoc
+    - postdoctoral
+    - research assistant
+    - research associate
+    - lab intern
+    - research intern
+    - visiting researcher
+    - visiting scholar
+    - PhD student
+    - doctoral researcher
+    - research fellow
+    - junior researcher
+  negative:
+    - full professor
+    - associate professor
+    - assistant professor
+    - lecturer
+    - senior lecturer
+    - administrative
+    - technician
+    - IT support
+    - secretary
+
+deadline_filter:
+  # Skip positions with deadlines before this date
+  min_days_remaining: 7

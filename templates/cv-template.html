@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{NAME}} — Academic CV</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap');
+
+    :root {
+      --font-body: 'EB Garamond', 'Georgia', serif;
+      --font-heading: 'Source Sans 3', 'Helvetica Neue', sans-serif;
+      --color-text: #1a1a1a;
+      --color-heading: #0d0d0d;
+      --color-muted: #555;
+      --color-link: #1a5276;
+      --color-rule: #ccc;
+      --page-width: 7in;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: var(--font-body);
+      font-size: 11pt;
+      line-height: 1.45;
+      color: var(--color-text);
+      max-width: var(--page-width);
+      margin: 0 auto;
+      padding: 0.25in 0;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 0.3in;
+    }
+
+    .header h1 {
+      font-family: var(--font-heading);
+      font-size: 22pt;
+      font-weight: 700;
+      color: var(--color-heading);
+      letter-spacing: 0.02em;
+      margin-bottom: 4pt;
+    }
+
+    .header .contact {
+      font-size: 9.5pt;
+      color: var(--color-muted);
+      line-height: 1.6;
+    }
+
+    .header .contact a {
+      color: var(--color-link);
+      text-decoration: none;
+    }
+
+    .header .contact .sep {
+      margin: 0 6px;
+      color: #bbb;
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 0.25in;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 12pt;
+      font-weight: 700;
+      color: var(--color-heading);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border-bottom: 1.5px solid var(--color-rule);
+      padding-bottom: 3pt;
+      margin-bottom: 8pt;
+    }
+
+    /* Entries */
+    .entry {
+      margin-bottom: 10pt;
+      page-break-inside: avoid;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .entry-title {
+      font-weight: 700;
+      font-size: 11pt;
+    }
+
+    .entry-date {
+      font-size: 9.5pt;
+      color: var(--color-muted);
+      white-space: nowrap;
+    }
+
+    .entry-subtitle {
+      font-style: italic;
+      color: var(--color-muted);
+      font-size: 10.5pt;
+      margin-bottom: 2pt;
+    }
+
+    .entry-description {
+      font-size: 10.5pt;
+      margin-top: 2pt;
+    }
+
+    .entry-description ul {
+      margin-left: 0.2in;
+      margin-top: 2pt;
+    }
+
+    .entry-description li {
+      margin-bottom: 2pt;
+    }
+
+    /* Publications */
+    .publication {
+      margin-bottom: 6pt;
+      font-size: 10.5pt;
+      padding-left: 0.2in;
+      text-indent: -0.2in;
+    }
+
+    .publication .author-self {
+      font-weight: 700;
+    }
+
+    .publication .venue {
+      font-style: italic;
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 4pt 12pt;
+      font-size: 10.5pt;
+    }
+
+    .skills-grid dt {
+      font-weight: 600;
+      color: var(--color-muted);
+    }
+
+    /* Links */
+    a {
+      color: var(--color-link);
+      text-decoration: underline;
+    }
+
+    /* Print */
+    @media print {
+      body { padding: 0; }
+      .section { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>{{NAME}}</h1>
+    <div class="contact">
+      {{EMAIL}}
+      <span class="sep">·</span>
+      {{PHONE}}
+      <span class="sep">·</span>
+      <a href="{{WEBSITE}}">{{WEBSITE_DISPLAY}}</a>
+      <br>
+      <a href="{{GOOGLE_SCHOLAR}}">Google Scholar</a>
+      <span class="sep">·</span>
+      <a href="https://orcid.org/{{ORCID}}">ORCID: {{ORCID}}</a>
+      <span class="sep">·</span>
+      <a href="https://github.com/{{GITHUB}}">GitHub</a>
+    </div>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="section">
+    <div class="section-title">Education</div>
+    <!-- {{EDUCATION_ENTRIES}} -->
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Ph.D. in {{FIELD}}</span>
+        <span class="entry-date">{{START}} — {{END}}</span>
+      </div>
+      <div class="entry-subtitle">{{INSTITUTION}}, {{DEPARTMENT}}</div>
+      <div class="entry-description">
+        Advisor: {{ADVISOR}}<br>
+        Thesis: {{THESIS_TITLE}}
+      </div>
+    </div>
+  </div>
+
+  <!-- RESEARCH EXPERIENCE -->
+  <div class="section">
+    <div class="section-title">Research Experience</div>
+    <!-- {{RESEARCH_ENTRIES}} -->
+  </div>
+
+  <!-- PUBLICATIONS -->
+  <div class="section">
+    <div class="section-title">Publications</div>
+    <!-- {{PUBLICATION_ENTRIES}} -->
+    <!--
+    <div class="publication">
+      <span class="author-self">Your Name</span>, Co-Author A, Co-Author B.
+      "Paper Title."
+      <span class="venue">Journal/Conference Name</span>, Year.
+    </div>
+    -->
+  </div>
+
+  <!-- PRESENTATIONS -->
+  <div class="section">
+    <div class="section-title">Presentations & Talks</div>
+    <!-- {{PRESENTATION_ENTRIES}} -->
+  </div>
+
+  <!-- TEACHING -->
+  <div class="section">
+    <div class="section-title">Teaching Experience</div>
+    <!-- {{TEACHING_ENTRIES}} -->
+  </div>
+
+  <!-- AWARDS -->
+  <div class="section">
+    <div class="section-title">Awards & Fellowships</div>
+    <!-- {{AWARD_ENTRIES}} -->
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section">
+    <div class="section-title">Skills & Techniques</div>
+    <dl class="skills-grid">
+      <!-- {{SKILL_ENTRIES}} -->
+      <dt>Languages</dt>
+      <dd>{{PROGRAMMING_LANGUAGES}}</dd>
+      <dt>Frameworks</dt>
+      <dd>{{FRAMEWORKS}}</dd>
+      <dt>Tools</dt>
+      <dd>{{TOOLS}}</dd>
+      <dt>Methods</dt>
+      <dd>{{METHODS}}</dd>
+      <dt>Languages</dt>
+      <dd>{{SPOKEN_LANGUAGES}}</dd>
+    </dl>
+  </div>
+
+  <!-- REFERENCES -->
+  <div class="section">
+    <div class="section-title">References</div>
+    <div class="entry-description">Available upon request.</div>
+  </div>
+
+</body>
+</html>

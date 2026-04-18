@@ -1,0 +1,84 @@
+# Academic-Ops Profile Configuration
+# Copy this file to config/profile.yml and fill in your details
+
+personal:
+  name: "Your Full Name"
+  email: "your.email@university.edu"
+  phone: "+1-555-0100"  # optional
+  orcid: ""  # e.g., 0000-0002-1234-5678
+  google_scholar: ""  # your Google Scholar profile URL
+  github: ""  # your GitHub profile URL
+  website: ""  # personal/academic website
+
+academic:
+  level: "PhD Student"  # Master's Student | PhD Student | PhD Candidate | Postdoc | Early Career Researcher
+  institution: "Your University"
+  department: "Your Department"
+  advisor: "Prof. Your Advisor"
+  expected_graduation: "2027-06"  # YYYY-MM or "completed"
+
+research:
+  field: "Computer Science"  # primary field
+  subfields:
+    - "Machine Learning"
+    - "Natural Language Processing"
+    - "Computational Linguistics"
+  methods:
+    - "Deep learning"
+    - "Transformer architectures"
+    - "Statistical analysis"
+  tools:
+    - "Python"
+    - "PyTorch"
+    - "HuggingFace"
+    - "LaTeX"
+  keywords:  # for portal scanning
+    - "NLP postdoc"
+    - "machine learning research assistant"
+    - "computational linguistics PhD intern"
+
+targets:
+  position_types:
+    - "Postdoc"
+    - "Research Internship"
+    - "Visiting Researcher"
+  geographic_preferences:
+    - "USA"
+    - "Europe"
+    - "Canada"
+  geographic_exclusions: []  # countries/regions to avoid
+  remote_ok: false  # most academic positions are on-site
+  start_date: "2026-09"  # desired start date (YYYY-MM)
+  duration_preference: "1-2 years"  # for postdocs
+  salary_minimum: 0  # 0 = no minimum (common for internships)
+
+preferences:
+  lab_size: "small-medium"  # small (1-4) | small-medium (5-8) | medium (9-15) | large (15+) | any
+  mentoring_style: "hands-on"  # hands-on | independent | balanced | any
+  publication_culture: "collaborative"  # solo | collaborative | any
+  interdisciplinary: true  # open to interdisciplinary labs?
+  industry_collaboration: true  # open to labs with industry ties?
+
+languages:
+  native: "English"
+  fluent: []
+  working: []
+
+visa:
+  citizenship: ""  # for knowing visa requirements
+  current_visa: ""  # if already in a country on a visa
+  need_sponsorship: true  # does the user need visa sponsorship?
+
+# Scoring weight overrides (optional — defaults in modes/_shared.md)
+# Uncomment and adjust if you want different priorities
+# scoring_weights:
+#   research_alignment: 0.25  # increase if research fit is your top priority
+#   methods_match: 0.15
+#   pi_group_fit: 0.12
+#   career_impact: 0.12
+#   publication_opportunity: 0.10
+#   funding: 0.08
+#   prestige: 0.08
+#   location: 0.05
+#   timeline: 0.05
+#   growth: 0.05

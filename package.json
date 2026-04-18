@@ -1,0 +1,19 @@
+{
+  "name": "academic-ops",
+  "version": "1.0.0",
+  "description": "AI-powered academic position search system built on Claude Code",
+  "type": "module",
+  "scripts": {
+    "doctor": "node doctor.mjs",
+    "merge": "node merge-tracker.mjs",
+    "dedup": "node dedup-tracker.mjs",
+    "verify": "node verify-pipeline.mjs",
+    "pdf": "node generate-pdf.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.45.0",
+    "yaml": "^2.4.0"
+  },
+  "keywords": ["academic", "postdoc", "research", "job-search", "claude-code", "ai-agent"],
+  "license": "MIT"
+}

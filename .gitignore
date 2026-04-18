@@ -1,0 +1,33 @@
+# Data (personal)
+data/
+!data/.gitkeep
+cv.md
+publications.md
+research-statement.md
+config/profile.yml
+portals.yml
+my-sources.yml
+
+# Output
+output/
+reports/
+interview-prep/
+data/auto-runs/
+
+# Batch
+batch/tracker-additions/*.tsv
+batch/tracker-additions/merged/
+
+# Node
+node_modules/
+package-lock.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo

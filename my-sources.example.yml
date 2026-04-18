@@ -1,0 +1,122 @@
+# ============================================================
+# MY SOURCES — Your Personal Watchlist
+# ============================================================
+#
+# This is YOUR list. Add anything here — lab pages, niche boards,
+# Twitter/X accounts, mailing lists, department pages, etc.
+#
+# Auto mode scans BOTH the base portals (portals.yml) AND this file.
+# Keep your personal finds here so they don't get overwritten
+# when the base portals get updated.
+#
+# Usage:
+#   "Add this lab to my sources" → Claude edits this file
+#   "Watch this department page" → Claude adds it here
+#   "Track Dr. Smith's lab for openings" → Claude adds it here
+#
+# ============================================================
+
+# ============================================================
+# LABS I'M WATCHING
+# ============================================================
+# These are specific labs you're interested in.
+# Auto mode checks their "join us" / "openings" pages each run.
+labs:
+  # Example:
+  # - name: "Manning NLP Group"
+  #   pi: "Prof. Christopher Manning"
+  #   institution: "Stanford"
+  #   url: https://nlp.stanford.edu
+  #   openings_page: https://nlp.stanford.edu/join/       # checked each scan
+  #   field: "NLP"
+  #   priority: high    # high | medium | low — high = always scan, low = scan monthly
+  #   notes: "Check for postdoc openings in efficient NLP"
+
+  # - name: "Bengio's Mila Lab"
+  #   pi: "Prof. Yoshua Bengio"
+  #   institution: "Université de Montréal / Mila"
+  #   url: https://mila.quebec
+  #   openings_page: https://mila.quebec/en/careers/
+  #   field: "deep learning"
+  #   priority: high
+
+# ============================================================
+# DEPARTMENT PAGES
+# ============================================================
+# Specific department career/openings pages you want to track.
+departments:
+  # Example:
+  # - name: "MIT CSAIL Openings"
+  #   url: https://www.csail.mit.edu/about/job-openings
+  #   institution: "MIT"
+  #   notes: "Check for postdoc and RA positions"
+
+  # - name: "MPI for Intelligent Systems"
+  #   url: https://is.mpg.de/jobs
+  #   institution: "Max Planck"
+  #   notes: "ML and robotics postdocs"
+
+# ============================================================
+# NICHE BOARDS & MAILING LISTS
+# ============================================================
+# Field-specific job boards, mailing list archives, wikis, etc.
+niche_boards:
+  # Example:
+  # - name: "NLP Highlights Job Board"
+  #   url: https://nlp-job-board.example.com
+  #   field: "NLP"
+  #   notes: "Updated weekly by the community"
+
+  # - name: "ML Collective"
+  #   url: https://mlcollective.org/opportunities/
+  #   field: "machine learning"
+
+  # - name: "Computational Neuroscience Jobs Wiki"
+  #   url: https://neuromatch.social/jobs
+  #   field: "computational neuroscience"
+
+# ============================================================
+# TWITTER/X & SOCIAL (scraped via WebSearch, not Playwright)
+# ============================================================
+# PIs or accounts that post openings. Auto mode searches for
+# recent posts from these accounts mentioning position keywords.
+social_accounts:
+  # Example:
+  # - handle: "@ChrisManningNLP"
+  #   platform: twitter
+  #   field: "NLP"
+  #   notes: "Sometimes posts postdoc openings"
+
+  # - handle: "@ylaboratory"
+  #   platform: twitter
+  #   field: "computational biology"
+
+# ============================================================
+# CUSTOM URLS
+# ============================================================
+# Any other URLs you want checked — conference job boards,
+# Google Sheets with postdoc listings, Reddit threads, etc.
+custom:
+  # Example:
+  # - name: "NeurIPS 2026 Job Board"
+  #   url: https://neurips.cc/Conferences/2026/JobBoard
+  #   type: seasonal      # seasonal | permanent
+  #   active_months: [9, 10, 11, 12]  # only scan Sep-Dec
+  #   notes: "Active around conference time"
+
+  # - name: "Reddit r/MachineLearning hiring thread"
+  #   url: https://www.reddit.com/r/MachineLearning/search?q=hiring+thread
+  #   type: permanent
+  #   notes: "Monthly hiring thread"
+
+# ============================================================
+# ALERTS — Keywords to watch for across ALL sources
+# ============================================================
+# Additional keywords beyond your profile. Useful for tracking
+# specific grants, programs, or emerging opportunities.
+alert_keywords:
+  # Example:
+  # - "ERC starting grant postdoc"
+  # - "CIFAR AI chairs"
+  # - "Helmholtz AI postdoc"
+  # - "Schmidt Futures fellowship"
