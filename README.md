@@ -4,7 +4,7 @@
 
 *Adapted from [career-ops](https://github.com/santifer/career-ops) for the academic world.*
 
-> Companies use AI to process applicants. Researchers deserve AI to **find the right lab.**
+> Researchers deserve AI to **find the right labs and opportunities.**
 
 ---
 
@@ -13,7 +13,7 @@
 Academic-Ops turns Claude Code into a full academic position search command center. Instead of manually browsing 20 university job boards and keeping a messy spreadsheet, you get an AI-powered pipeline that:
 
 - **Evaluates positions** with a structured 10-dimension scoring system (research alignment, PI reputation, career impact, etc.)
-- **Generates tailored academic CVs and cover letters** customized per position
+- **Generates tailored academic CVs and cover letters** customised per position
 - **Scans portals** automatically (EURAXESS, AcademicJobsOnline, university career pages, lab websites)
 - **Researches PIs and labs** — publication analysis, alumni tracking, mentoring signals
 - **Processes in batch** — evaluate 10+ positions in parallel with sub-agents
@@ -26,7 +26,7 @@ Academic-Ops turns Claude Code into a full academic position search command cent
 - **PhD candidates** searching for postdoc positions
 - **Early postdocs** looking for their next position
 
-> **Important: This is NOT a spray-and-pray tool.** Academic-Ops is a filter — it helps you find the few positions worth your time out of hundreds. The system recommends against applying to anything with weak research alignment. Your time is valuable, and so is the PI's.
+> Academic-Ops is a filter that helps you find the few positions worth your time out of hundreds. The system recommends against applying to anything with weak research alignment. Your time is valuable, and so is the PI's.
 
 ## Features
 
@@ -52,7 +52,7 @@ Academic-Ops turns Claude Code into a full academic position search command cent
 
 ```bash
 # 1. Clone and install
-git clone https://github.com/YOUR_USERNAME/academic-ops.git
+git clone https://github.com/anvix9/academic-ops.git
 cd academic-ops && npm install
 npx playwright install chromium
 
@@ -167,29 +167,6 @@ You can mix both — auto to discover, manual to evaluate positions you find you
 
 ---
 
-## Career-Ops vs. Academic-Ops
-
-Academic-Ops is adapted from [career-ops](https://github.com/santifer/career-ops). Here's what changed and what was added:
-
-| Aspect | Career-Ops (Industry) | Academic-Ops (Research) |
-|--------|----------------------|------------------------|
-| **Target audience** | Job seekers for industry roles | Master's, PhD students, postdocs seeking lab positions |
-| **Evaluation focus** | Role fit, compensation, company culture, interview prep (STAR stories) | Research alignment, PI reputation, publication opportunity, mentoring signals |
-| **Scoring dimensions** | 10 dimensions weighted for industry (comp research, negotiation leverage, etc.) | 10 dimensions weighted for academia (research alignment 20%, methods match 15%, PI fit 12%) |
-| **Archetypes** | LLMOps, Agentic, PM, SA, FDE, Transformation | Computational, Experimental, Theory, Clinical, Bioinformatics, Design, Social, Interdisciplinary + 10 AI sub-archetypes |
-| **CV generation** | ATS-optimized industry résumé (1-2 pages, keyword-injected) | Academic CV (no page limit, publications, talks, teaching) + cover letter + research statement |
-| **Contact mode** | LinkedIn outreach messages | Cold email to PI (references specific papers, not generic) |
-| **Deep research** | Company research (funding, culture, Glassdoor) | PI deep dive (h-index, alumni tracking, student first-authorship rate, mentoring red/green flags) |
-| **Interview prep** | STAR+R behavioral stories, salary negotiation scripts | Lab visit prep (papers to read, questions for current lab members, technical brush-up) |
-| **Portal scanning** | Greenhouse, Ashby, Lever, company career pages (45+ companies) | EURAXESS, AcademicJobsOnline, Nature Careers, conference job boards, university pages, AI lab pages (60+ sources) |
-| **Source management** | Single `portals.yml` | Dual lists: `portals.yml` (base) + `my-sources.yml` (personal watchlist) |
-| **Auto mode** | Not available — manual URL paste only | Full auto pipeline: scan → filter vs CV → batch evaluate → ranked shortlist |
-| **Scheduling** | Not available | Weekend autopilot: cron/launchd runs auto every Saturday, diff report on Monday |
-| **AI-specific** | Generic industry roles | 40+ AI research labs and institutes pre-configured, 10 ML sub-archetypes, venue tier scoring |
-| **Negotiation** | Salary negotiation frameworks, competing offer leverage | Not applicable (academic positions have fixed stipends) |
-| **Application filling** | Auto-fill application forms with Playwright | Not included (academic applications are email + portal, less automatable) |
-| **Dashboard** | Go TUI terminal dashboard with Bubble Tea | Not included (tracker is markdown-based; TUI can be added) |
-
 ### What's preserved from Career-Ops
 
 The core architecture is the same — the parts that make career-ops powerful also power academic-ops:
@@ -209,7 +186,6 @@ Features that don't exist in career-ops:
 - **Personal watchlist** (`my-sources.yml`) — separate from base portals, tracks specific labs and PIs
 - **Weekend scheduling** — automated cron runs with diff reports
 - **PI deep dive** — publication analysis, alumni tracking, mentoring signals
-- **Cover letter + research statement generation** — tailored per position
 - **AI research lab directory** — 40+ industry labs, institutes, and conference boards pre-configured
 - **AI sub-archetypes** — NLP, CV, RL, AI Safety, Generative AI, Robotics, ML Systems, AI for Science, etc.
 - **Venue tier scoring** — evaluates PI quality based on where they publish (NeurIPS/ICML/ACL tier vs. workshops)
