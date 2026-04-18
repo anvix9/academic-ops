@@ -44,6 +44,164 @@ portals:
     region: Global
     notes: "Scholarships and funded PhD/postdoc positions."
 
+  - name: Find a PhD
+    url: https://www.findaphd.com
+    type: aggregator
+    region: Global
+    notes: "PhD and postdoc positions worldwide. Strong filtering."
+
+  - name: Academic Positions
+    url: https://www.academicpositions.com
+    type: aggregator
+    region: Global
+    notes: "PhD, postdoc, and faculty positions globally."
+
+  - name: University Positions
+    url: https://www.universitypositions.eu
+    type: aggregator
+    region: Europe
+    notes: "European university positions — PhD, postdoc, faculty."
+
+  - name: PhD Portal
+    url: https://www.phdportal.com
+    type: aggregator
+    region: Global
+    notes: "PhD programs and funded positions worldwide."
+
+  - name: Postdoc Jobs
+    url: https://www.postdocjobs.com
+    type: aggregator
+    region: Global
+    notes: "Dedicated postdoc listing site."
+
+  - name: Science Jobs
+    url: https://www.sciencejobs.org
+    type: aggregator
+    region: Global
+    notes: "Research positions across sciences."
+
+  - name: All-Acad
+    url: https://www.all-acad.com
+    type: aggregator
+    region: Global
+    notes: "Academic jobs aggregator — PhD, postdoc, faculty."
+
+  - name: Global Study Road
+    url: https://www.globalstudyroad.com
+    type: aggregator
+    region: Global
+    notes: "Scholarships, PhD positions, and study abroad opportunities."
+
+  - name: Scholars4Dev
+    url: https://www.scholars4dev.com
+    type: aggregator
+    region: Global
+    notes: "Scholarships and fellowships for developing country students."
+
+  - name: Science Careers (AAAS)
+    url: https://jobs.sciencecareers.org
+    type: aggregator
+    region: Global
+    notes: "AAAS job board — research positions across all sciences."
+
+  - name: Study International
+    url: https://www.studyinternational.com
+    type: aggregator
+    region: Global
+    notes: "Study abroad, scholarships, and academic positions."
+
+  - name: Scholarship Positions
+    url: https://scholarship-positions.com
+    type: aggregator
+    region: Global
+    notes: "Scholarships, fellowships, and funded PhD positions."
+
+  - name: Scholarship Roar
+    url: https://www.scholarshiproar.com
+    type: aggregator
+    region: Global
+
+  - name: Scholarships.com
+    url: https://www.scholarships.com
+    type: aggregator
+    region: USA
+    notes: "US-focused scholarships and funding."
+
+  - name: Education Vacancy
+    url: https://www.vacancyedu.com
+    type: aggregator
+    region: Global
+    notes: "PhD, postdoc, and faculty vacancies."
+
+  - name: PhD Positions
+    url: https://www.phdposition.com
+    type: aggregator
+    region: Global
+
+  - name: Opportunities Corners
+    url: https://opportunitycorners.info
+    type: aggregator
+    region: Global
+    notes: "Scholarships, internships, and academic opportunities."
+
+  - name: Postgraduate Studentships
+    url: https://www.postgraduatestudentships.co.uk
+    type: aggregator
+    region: UK
+    notes: "UK-focused funded PhD studentships."
+
+  - name: Secure My Scholarship
+    url: https://www.securemyscholarship.com
+    type: aggregator
+    region: Global
+
+  - name: PhD in France
+    url: https://www.phdinfrance.com
+    type: aggregator
+    region: France
+    notes: "French PhD and postdoc positions."
+
+  # --- Region-Specific ---
+  - name: jobs.ac.uk PhD
+    url: https://www.jobs.ac.uk/phd
+    type: aggregator
+    region: UK
+    notes: "UK PhD-specific listings."
+
+  - name: Bandi MIUR
+    url: https://www.bandi.miur.it
+    type: aggregator
+    region: Italy
+    notes: "Italian Ministry of Research — grants and positions."
+
+  - name: Grants.at
+    url: https://www.grants.at
+    type: aggregator
+    region: Austria
+    notes: "Austrian research grants and academic positions."
+
+  - name: CSIRO Jobs
+    url: https://www.jobs.csiro.au
+    type: aggregator
+    region: Australia
+    notes: "Australia's national science agency — research positions."
+
+  - name: China Scholarship Council
+    url: https://www.csc.edu.cn/laihua
+    type: aggregator
+    region: China
+    notes: "Chinese government scholarships for international students."
+
+  - name: China Scholarships Portal
+    url: https://www.chinesescholarshipcouncil.com
+    type: aggregator
+    region: China
+
+  - name: Scholarships PK
+    url: https://scholarshipspk.com
+    type: aggregator
+    region: Pakistan/Global
+
   # --- Discipline-Specific ---
   - name: mathjobs.org
     url: https://www.mathjobs.org/jobs
