@@ -14,7 +14,7 @@ Academic-Ops turns Claude Code into a full academic position search command cent
 
 - **Evaluates positions** with a structured 10-dimension scoring system (research alignment, PI reputation, career impact, etc.)
 - **Generates tailored academic CVs and cover letters** customised per position
-- **Scans portals** automatically (EURAXESS, AcademicJobsOnline, university career pages, lab websites)
+- **Scans portals** automatically ([PhD/RA/Interns Opening 2026](https://docs.google.com/spreadsheets/d/1vcEUT_5bXYFQgIzVKpsMQlYmV2xv15VtLXq2rvXZqRk/), EURAXESS, AcademicJobsOnline, university career pages, lab websites)
 - **Researches PIs and labs** — publication analysis, alumni tracking, mentoring signals
 - **Processes in batch** — evaluate 10+ positions in parallel with sub-agents
 - **Tracks everything** in a single source of truth
